@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="buttons.css" />
+    <style>
+      html{
+        scroll-behavior: smooth;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0px;
+      }
+      #showcase {
+        background: url(mert2.jpg);
+        background-size: cover;
+        height: 500px;
+        width: 100%;
+        padding: 10px;      
+        position: relative;
+      }
+      #showcase h1{
+        position: absolute;
+        top: 50%;
+        margin: 0;
+        color: #fff;
+        font-size: 120px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+      #blog {
+        background-color: #93bfcf;
+        padding: 10px;
+        text-align: center;
+      }
+      .header-main {
+        background-color: #6096B4;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        padding: 8px 16px;
+        top: 0;
+      }
+      .header-nav {
+        display: inline-block;
+        text-align: right;
+        width: calc(100% - 80px);
+      }
+      .header-nav-items {
+        list-style: none;
+      }
+      .header-nav-item {
+        display: inline-block;
+        margin: 0px 8px;
+      }
+      .header-nav-item a {
+        color: #eee9da;
+        text-decoration: none;
+      }
+      .header-logo {
+        color: white;
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: bold;
+        margin-left: 10px;
+      }
+      .header-nav-item a:hover {
+        color: #0f0f0f;
+      }
+
+      .header-nav-item a:active {
+        color: #27353f;
+      }
+      .header-nav-item::before {
+        content: "\2B50";
+      }
+
+      .button::before {
+        content: none;
+      }
+      .button a:hover {
+        color: #48796d;
+        background-color: white;
+        border: 2px solid black;
+      }
+      .row {
+        margin-bottom: 30px;
+      }
+      .col {
+        display: inline-block;
+        width: 30%;
+      }
+      #blog h2 {
+        color: #eee9da;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .icon-box h3 {
+        font-size: 25px;
+        color: #eee9da;
+      }
+      .icon-box i {
+        color: rgb(0, 0, 0);
+      }
+      .socialmedia {
+        color: wheat;
+        text-decoration: none;
+      }
+      .col2 {
+        display: inline-block;
+        width: calc(50% - 2px);
+        height: 350px;
+        background-color: #0e0e0e;
+        color: rgb(255, 255, 255);
+      }
+      .features-left {
+        background: url(mert3.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+      .features-right {
+        padding: 40px;
+        vertical-align: top;
+      }
+      .features-right h3 {
+        font-size: 30px;
+        color: #93bfcf;
+      }
+
+      #features a:hover {
+        background-color: #f3f3f3;
+        color: #48796d;
+      }
+      .plan {
+        background-color: #93bfcf;
+        text-align: center;
+        padding: 16px;
+        margin: 2px;
+        width: 32.9%;
+        float: left;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+          transition: box-shadow 1s;
+      }
+      .plan:hover{
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 54px 55px,
+          rgba(0, 0, 0, 0.22) 0px -12px 30px, rgba(0, 0, 0, 0.32) 0px 4px 6px,
+          rgba(0, 0, 0, 0.37) 0px 12px 13px, rgba(0, 0, 0, 0.29) 0px -3px 5px;
+      }
+      .clearfix {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .container {
+        margin: 0 auto;
+        width: 1000px;
+      }
+      .plan ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+      }
+      .plan li {
+        margin: 15px;
+      }
+      .onerilen{
+        position: relative;
+        top: -20px;
+      }
+      .section-title{
+        margin-bottom: 40px;
+        text-align: center;
+      }
+      main{
+        margin-top: 50px;
+      }
+      #backtotop{
+        position: fixed;
+        bottom: 20px;
+        right: 25px;
+        
+      }
+      #backtotop i{
+        color: #6096B4;
+        font-size: 45px;
+        transition: .6s;
+
+      }
+      #backtotop i:hover{
+        color:#41718b ;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <header class="header-main">
+      <a href="" class="header-logo">Mert</a>
+      <nav class="header-nav">
+        <ul class="header-nav-items">
+          <li class="header-nav-item"><a href="">Özgeçmiş</a></li>
+          <li class="header-nav-item"><a href="">İletişim</a></li>
+          <li class="header-nav-item">
+            <a href="www.google.com.tr" class="btn btn-primary">Kayıt</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="showcase">
+        <h1>MERT AYHAN</h1>
+      </section>
+      <section id="blog">
+        <div class="row">
+          <h2>Bloguma Hoşgeldiniz</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere,
+            similique!
+          </p>
+        </div>
+        <div class="rowalt row">
+          <div class="col icon-box">
+            <i class="fa-brands fa-github fa-3x"></i>
+            <h3><a href="#" class="socialmedia">GitHub</a></h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="col icon-box">
+            <i class="fa-brands fa-linkedin fa-3x"></i>
+            <h3><a href="#" class="socialmedia">Linkedin</a></h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="col icon-box">
+            <i class="fa-brands fa-instagram fa-3x"></i>
+            <h3>
+              <a
+                href="https://www.instagram.com/p/CjL3TzWoC_hNWbv_YcG884rx0SekVpNlGyIbIs0/?next=%2F"
+                target="_blank"
+                class="socialmedia"
+                >Instagram</a
+              >
+            </h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </section>
+      <section id="features">
+        <div class="row">
+          <div class="col2 features-left"></div>
+          <div class="col2 features-right">
+            <h3>MERT AYHAN KİMDİR?</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Consectetur dignissimos voluptatum minus. Culpa commodi
+              repudiandae optio alias labore. Laborum corporis iusto, sit aut
+              rem eaque quidem nesciunt eius maxime modi doloremque? Odio
+              cupiditate explicabo error vitae inventore aperiam nisi, eum
+              quisquam quaerat aspernatur quam! Dolore quam qui ab tenetur
+              distinctio.
+            </p>
+            <a href="" class="btn btn-secondary">Devam</a>
+          </div>
+        </div>
+      </section>
+      <section id="plans">
+        <h2 class="section-title" style="text-align: center">
+          Destek Paketleri
+        </h2>
+        <div class="clearfix container">
+          <div class="plan">
+            <h2>Arcturus</h2>
+            <h3>9.99₺</h3>
+            <ul>
+              <li>Lorem ipsum dolor sit.</li>
+              <li>Lorem ipsum dolor sit.</li>
+              <li>Lorem ipsum dolor sit.</li>
+            </ul>
+            <button class="btn btn-primary">Abone Ol</button>
+          </div>
+          <div class="plan onerilen">
+            <h2 style="background-color: white; color: #27353f;border-radius: 10px; padding:5px;">Önerilen</h2>
+            <h2>Canopus</h2>
+            <h3>19.99₺</h3>
+            <ul>
+              <li>Lorem ipsum dolor sit.</li>
+              <li>Lorem ipsum dolor sit.</li>
+              <li>Lorem ipsum dolor sit.</li>
+            </ul>
+            <button class="btn btn-primary">Abone Ol</button>
+          </div>
+          <div class="plan">
+            <h2>Sirius</h2>
+            <h3>29.99₺</h3>
+            <ul>
+              <li>Lorem ipsum dolor sit.</li>
+              <li>Lorem ipsum dolor sit.</li>
+              <li>Lorem ipsum dolor sit.</li>
+            </ul>
+            <button class="btn btn-primary">Abone Ol</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <a href="#body" id="backtotop"><i><i class="fa-solid fa-shuttle-space"></i></i></a>
+  </body>
+</html>
